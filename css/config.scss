@@ -1,0 +1,11 @@
+// Responsive
+$mobileBreakpoint: 640px;
+$tabletBreakpoint: 1024px;
+@mixin mobile() { @media screen and (max-width:$mobileBreakpoint) { @content; } } // @include mobile { }
+@mixin tablet() { @media screen and (min-width: $mobileBreakpoint + 1px) and (max-width:$tabletBreakpoint) { @content; } } // @include tablet { }
+@mixin desktop() { @media screen and (min-width:$tabletBreakpoint + 1px) { @content; } } // @include desktop { }
+
+// COLORS
+$white: #FFFFFF;
+$red:#C96153;
+$black: #000000;

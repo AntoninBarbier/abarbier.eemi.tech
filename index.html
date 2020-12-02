@@ -1,0 +1,66 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frozen - Homepage</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/config.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- CUSTOM CURSOR TO REPLACE DEFAULT CURSOR APPEARANCE -->
+    <div class="cursor"></div>
+    <!-- HEADER -->
+    <header id="snow">
+        <!-- L'intégration Codepen est attribuée à ce titre: changement de la perspective au mouse over (CSS + JS) -->
+        <!-- https://codepen.io/MihaiIonescu/pen/VQWWgj -->
+        <h1 class="title hoverable"><span>Frozen</span></h1>
+        <nav>
+            <img src="assets/img/snowflake.svg" alt="Logo flocon de neige" class="logo">
+            <ul>
+                <li class="hoverable"><a href="./">Home</a></li>
+                <li class="hoverable"><a href="./about.html">About</a></li>
+                <li class="hoverable"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- SECTION 1 -->
+    <section class="intro">
+         <h2>Frozen is an<br/>experiment</h2>
+        <div>
+            <div class="discoverBlock">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea eius tenetur dolorum aperiam dolor, accusamus minus. Temporibus possimus unde similique cumque, distinctio reiciendis ullam dignissimos pariatur magnam omnis ab nobis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea eius tenetur dolorum aperiam dolor, accusamus minus. Temporibus possimus unde similique cumque, distinctio reiciendis ullam dignissimos pariatur magnam omnis ab nobis!</p>
+                <a href="#"><button>DISCOVER MORE</button></a>
+            </div>
+            <div class="flake hoverable">
+                <img src="assets/img/snowflake.svg" alt=""/>
+            </div>
+        </div>
+    </section>
+    <!-- SECTION 2 -->
+    <section class="video">
+        <iframe src="https://player.vimeo.com/video/155721812?autoplay=1&loop=1&muted=1title=0&byline=0&portrait=0&sidedock=0" width="640" height="640" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        <p>ICE<br/>IS<br/><span class="cold">COLD.</span></p>
+    </section>
+    <!-- FOOTER -->
+    <div class="redBar"></div>
+    <footer>
+        <div>
+            <ul>
+                <li><a target="_blank" href="">Contact</a></li>
+                <li><a target="_blank" href="https://github.com/AntoninBarbier/">Github</a></li>
+                <li><a target="_blank" href="https://www.linkedin.com/in/antonin-barbier">LinkedIn</a></li>
+                <!-- <li><a target="_blank" href="#">Malt</a></li> -->
+            </ul>
+        </div>
+        <div>Made by <span class="author">Antonin Barbier.</span></div>
+        <div><img src="./assets/img/snowflake.svg" alt=""></div>
+    </footer>
+    <script src="scripts/p5.min.js"></script>
+    <script src="scripts/sketch.js"></script>
+    <script src="scripts/index.js"></script>
+</body>
+
+</html>

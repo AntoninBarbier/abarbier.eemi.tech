@@ -1,0 +1,42 @@
+header > div {
+  position: absolute;
+  width: 30vw;
+  height: 30vw;
+  padding: 40px;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #C96153;
+  border: 5px solid #C96153;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media screen and (max-width: 640px) {
+  header > div {
+    width: 90vw;
+    height: 90vw;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 15%;
+  }
+}
+
+header > div p {
+  font-family: "Playfair";
+  text-align: center;
+  line-height: 32px;
+}
+
+header > div p a {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=about.css.map */

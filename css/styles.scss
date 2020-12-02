@@ -1,0 +1,247 @@
+// SASS FILE WITH SCSS SYNTAX, COMPILED TO CSS VIA LIVE SASS COMPILER VSCODE PLUG-IN
+
+@import './config.scss';
+
+// HEADER SECTION
+
+header {
+    .title {
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -50%);
+        perspective: 3px;
+
+        span {
+            display: block;
+            transition: transform 0.15s;
+            text-transform: uppercase;
+            color: $red;
+            font-family: 'Bebas';
+            letter-spacing: 0.2em;
+            border: 10px solid;
+            padding: 50px 100px;
+            background-color: $black;
+            font-size: 3rem;
+            color: $red;
+
+            @include mobile {
+                padding: 30px 50px;
+            }
+
+            @include desktop {
+                &:hover {
+                    border-color: $red;
+                    background-color: $red;
+                    color: white;
+                    transition: all 0.25s;
+                }
+            }
+        }
+    }
+}
+
+// INTRO SECTION
+
+.intro {
+    background-color: $red;
+    padding: 50px;
+
+    h2 {
+        margin: 0;
+        font-family: 'Bebas';
+        color: $black;
+        font-size: 32px;
+        letter-spacing: 0.1em;
+        margin-bottom: 50px;
+    }
+
+    &>div {
+        display: flex;
+        justify-content: space-around;
+
+        @include mobile {
+            flex-wrap: wrap;
+        }
+
+        .discoverBlock {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 60%;
+
+            @include mobile {
+                width: 100%;
+            }
+
+            p {
+                font-family: 'Playfair';
+                margin-right: 30px;
+                line-height: 40px;
+
+                @include mobile {
+                    margin-right: 0px;
+                    line-height: 24px;
+                    margin-bottom: 30px;
+                }
+            }
+    
+            a {
+                display: block;
+                width: fit-content;
+                -moz-width: fit-content;
+            }
+            
+            button {
+                border: 3px solid $black;
+                padding: 10px 30px;
+                color: $black;
+                background: none;
+                cursor: pointer;
+                font-family: 'Bebas';
+                font-size: 24px;
+                position: relative;
+                transition: background-color 0.25s, color 0.25s;
+
+                @include mobile {
+                    margin-bottom: 20px;
+                }
+
+                @include desktop {
+                    &:hover {
+                        background-color: $black;
+                        color: $red;
+                        transition: background-color 0.25s, color 0.25s;
+                    }
+                }
+            }
+        }
+
+        .flake {
+            width: 20vw;
+            height: 20vw;
+            background-color: $black;
+            position: relative;
+            transition: background-color 0.25s;
+
+            @include mobile {
+                display: none;
+            }
+
+            img {
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%) scale(2);
+                position: absolute;
+                overflow: hidden;
+            }
+
+            &:hover {
+                background-color: $white;
+                transition: background-color 0.25s;
+
+                img {
+                    animation: rotateSnowflake 1s linear infinite;
+                    transform-origin: center;
+                    user-select: none;
+                }
+            }
+        }
+    }
+}
+
+// VIDEO SECTION
+
+.video {
+    background-color: $black;
+    display: flex;
+    align-items: center;
+    
+    @include mobile {
+        padding-bottom: 50px;
+        flex-direction: column;
+    }
+
+    p {
+        font-size: 72px;
+        margin-left: 20vw;
+        font-family: 'Bebas';
+        color: $red;
+
+        @include mobile {
+            text-align: center;
+            margin-left: 0;
+            margin-top: 30px;
+        }
+
+        span {
+            color: $white;
+            border-bottom: 3px dashed $white;
+        }
+    }
+
+    @include mobile {
+        iframe {
+            width: 100%;
+            height: 100vw;
+            margin: auto;
+        }
+    }
+}
+
+// FOOTER SECTION
+
+.redBar {
+    background-color: $red;
+    height: 30px;
+    width: 100%;
+}
+
+footer {
+    background-color: $black;
+    color: $white;
+    font-family: 'Playfair';
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 20px solid white;
+    transition: color 0.25s;
+
+    & > div:nth-of-type(2) {
+        @include mobile {
+            margin-bottom: 30px;
+        }
+    }
+
+    @include mobile {
+        flex-direction: column;
+    }
+
+    ul li {
+        margin: 15px 0;
+
+        &:hover {
+            color: $red;
+            transition: color 0.25s;
+        }
+    }
+
+    .author {
+        color: $red;
+        text-decoration: underline;
+    }
+}
+
+// ANIMATIONS
+
+// Snowflake rotation animation
+@keyframes rotateSnowflake {
+    from {
+        transform: translate(-50%, -50%) scale(2) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) scale(2) rotate(360deg);
+    }
+}

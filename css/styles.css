@@ -1,0 +1,306 @@
+header .title {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-perspective: 3px;
+          perspective: 3px;
+}
+
+header .title span {
+  display: block;
+  -webkit-transition: -webkit-transform 0.15s;
+  transition: -webkit-transform 0.15s;
+  transition: transform 0.15s;
+  transition: transform 0.15s, -webkit-transform 0.15s;
+  text-transform: uppercase;
+  color: #C96153;
+  font-family: 'Bebas';
+  letter-spacing: 0.2em;
+  border: 10px solid;
+  padding: 50px 100px;
+  background-color: #000000;
+  font-size: 3rem;
+  color: #C96153;
+}
+
+@media screen and (max-width: 640px) {
+  header .title span {
+    padding: 30px 50px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  header .title span:hover {
+    border-color: #C96153;
+    background-color: #C96153;
+    color: white;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+  }
+}
+
+.intro {
+  background-color: #C96153;
+  padding: 50px;
+}
+
+.intro h2 {
+  margin: 0;
+  font-family: 'Bebas';
+  color: #000000;
+  font-size: 32px;
+  letter-spacing: 0.1em;
+  margin-bottom: 50px;
+}
+
+.intro > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media screen and (max-width: 640px) {
+  .intro > div {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.intro > div .discoverBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 60%;
+}
+
+@media screen and (max-width: 640px) {
+  .intro > div .discoverBlock {
+    width: 100%;
+  }
+}
+
+.intro > div .discoverBlock p {
+  font-family: 'Playfair';
+  margin-right: 30px;
+  line-height: 40px;
+}
+
+@media screen and (max-width: 640px) {
+  .intro > div .discoverBlock p {
+    margin-right: 0px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+.intro > div .discoverBlock a {
+  display: block;
+  width: -webkit-fit-content;
+  width: fit-content;
+  -moz-width: -moz-fit-content;
+}
+
+.intro > div .discoverBlock button {
+  border: 3px solid #000000;
+  padding: 10px 30px;
+  color: #000000;
+  background: none;
+  cursor: pointer;
+  font-family: 'Bebas';
+  font-size: 24px;
+  position: relative;
+  -webkit-transition: background-color 0.25s, color 0.25s;
+  transition: background-color 0.25s, color 0.25s;
+}
+
+@media screen and (max-width: 640px) {
+  .intro > div .discoverBlock button {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .intro > div .discoverBlock button:hover {
+    background-color: #000000;
+    color: #C96153;
+    -webkit-transition: background-color 0.25s, color 0.25s;
+    transition: background-color 0.25s, color 0.25s;
+  }
+}
+
+.intro > div .flake {
+  width: 20vw;
+  height: 20vw;
+  background-color: #000000;
+  position: relative;
+  -webkit-transition: background-color 0.25s;
+  transition: background-color 0.25s;
+}
+
+@media screen and (max-width: 640px) {
+  .intro > div .flake {
+    display: none;
+  }
+}
+
+.intro > div .flake img {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(2);
+          transform: translate(-50%, -50%) scale(2);
+  position: absolute;
+  overflow: hidden;
+}
+
+.intro > div .flake:hover {
+  background-color: #FFFFFF;
+  -webkit-transition: background-color 0.25s;
+  transition: background-color 0.25s;
+}
+
+.intro > div .flake:hover img {
+  -webkit-animation: rotateSnowflake 1s linear infinite;
+          animation: rotateSnowflake 1s linear infinite;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.video {
+  background-color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 640px) {
+  .video {
+    padding-bottom: 50px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.video p {
+  font-size: 72px;
+  margin-left: 20vw;
+  font-family: 'Bebas';
+  color: #C96153;
+}
+
+@media screen and (max-width: 640px) {
+  .video p {
+    text-align: center;
+    margin-left: 0;
+    margin-top: 30px;
+  }
+}
+
+.video p span {
+  color: #FFFFFF;
+  border-bottom: 3px dashed #FFFFFF;
+}
+
+@media screen and (max-width: 640px) {
+  .video iframe {
+    width: 100%;
+    height: 100vw;
+    margin: auto;
+  }
+}
+
+.redBar {
+  background-color: #C96153;
+  height: 30px;
+  width: 100%;
+}
+
+footer {
+  background-color: #000000;
+  color: #FFFFFF;
+  font-family: 'Playfair';
+  padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border-top: 20px solid white;
+  -webkit-transition: color 0.25s;
+  transition: color 0.25s;
+}
+
+@media screen and (max-width: 640px) {
+  footer > div:nth-of-type(2) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+footer ul li {
+  margin: 15px 0;
+}
+
+footer ul li:hover {
+  color: #C96153;
+  -webkit-transition: color 0.25s;
+  transition: color 0.25s;
+}
+
+footer .author {
+  color: #C96153;
+  text-decoration: underline;
+}
+
+@-webkit-keyframes rotateSnowflake {
+  from {
+    -webkit-transform: translate(-50%, -50%) scale(2) rotate(0deg);
+            transform: translate(-50%, -50%) scale(2) rotate(0deg);
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%) scale(2) rotate(360deg);
+            transform: translate(-50%, -50%) scale(2) rotate(360deg);
+  }
+}
+
+@keyframes rotateSnowflake {
+  from {
+    -webkit-transform: translate(-50%, -50%) scale(2) rotate(0deg);
+            transform: translate(-50%, -50%) scale(2) rotate(0deg);
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%) scale(2) rotate(360deg);
+            transform: translate(-50%, -50%) scale(2) rotate(360deg);
+  }
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,39 @@
+// SASS FILE WITH SCSS SYNTAX, COMPILED TO CSS VIA LIVE SASS COMPILER VSCODE PLUG-IN
+
+@import './config.scss';
+
+header {
+    & > div {
+        position: absolute;
+        width: 30vw;
+        height: 30vw;
+        padding: 40px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background-color: $red;
+        border: 5px solid $red;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+
+        @include mobile {
+            width: 90vw;
+            height: 90vw;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 15%;
+        }
+
+        p {
+            font-family: "Playfair";
+            text-align: center;
+            line-height: 32px;
+
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+}
